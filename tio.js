@@ -2882,7 +2882,13 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
-          tio.sendMessage(m.chat, { text: "*SUKSES MENAMBAHKAN DENGAN DURASI* $[1] args[1]\n\n_check member sewa grup dengan ketik .listsewa_" })
+          tio.sendMessage(m.chat, { text: "*SUKSES MENAMBAHKAN DENGAN DURASI*" }[1])
+          let buttonsSewa = [
+            {
+              buttonId: `${prefix}listsewa`,
+              buttonText: { displayText: LIST SEWA },
+              type: 1,
+            }
         }
         break
       case "listsewa":
