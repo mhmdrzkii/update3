@@ -2890,9 +2890,8 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
               type: 1,
             }
           ]
-       
         break
-      case "listsewa":
+       case "listsewa":
         {
           if (!isCreator) return m.reply(mess.owner)
           let data = require("./database/sewa.json")
@@ -2902,10 +2901,25 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             const now = new Date()
             const exp = new Date(i.expired)
             const diffTime = Math.abs(exp - now)
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-            txt += `*Grup : ${i.id}*\n*Durasi Sewa : ${diffDays} Hari tersisa*\n\n`
+
+            let txtDuration = ""
+            if (diffTime < 1000 * 60 * 60) {
+              // kurang dari satu jam
+              const diffMinutes = Math.ceil(diffTime / (1000 * 60))
+              txtDuration = `${diffMinutes} Menit`
+            } else if (diffTime < 1000 * 60 * 60 * 24) {
+              // kurang dari satu hari
+              const diffHours = Math.ceil(diffTime / (1000 * 60 * 60))
+              txtDuration = `${diffHours} Jam`
+            } else {
+              // lebih dari satu hari
+              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+              txtDuration = `${diffDays} Hari`
+            }
+
+            const txt = `*Grup : ${i.id}*\n*Durasi Sewa : ${txtDuration} tersisa*\n\n`
+            m.reply(txt)
           }
-          m.reply(txt)
         }
         break
       case "removesewa":
