@@ -336,8 +336,14 @@ module.exports = tio = async (tio, m, chatUpdate, store) => {
     if (m.message) {
       tio.readMessages([m.key])
     }
-    //  Di sini editing autovn dan auto ketik
-    // selebihnya jangan di edit nanti error
+if (m.message) {
+tio.sendPresenceUpdate('composing', m.chat)
+tio.readMessages([m.key])
+}
+ if (m.message) {
+tio.sendPresenceUpdate('recording', m.chat)
+tio.readMessages([m.key])
+}
     /**if (m.message) {
 tio.sendPresenceUpdate('composing', m.chat)
 tio.readMessages([m.key])
