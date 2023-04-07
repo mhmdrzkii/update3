@@ -2543,40 +2543,6 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           })
         }
         break
-      case "ggem2":
-          ggem = `╭──❍「 *STORE MENU* 」
-│ *»* ${prefix}addlist
-│ *»* ${prefix}updatelist
-│ *»* ${prefix}deletelist
-│ *»* ${prefix}Proses 
-│ *»* ${prefix}Done
-│ *»* ${prefix}Welcome Message
-│ *»* ${prefix}linkgroup
-│ *»* ${prefix}ephemeral [option]
-│ *»* ${prefix}setppgc [image]
-│ *»* ${prefix}setname [text]
-│ *»* ${prefix}setdesc [text]
-│ *»* ${prefix}group [option]
-│ *»* ${prefix}editinfo [option]
-│ *»* ${prefix}add @user
-│ *»* ${prefix}kick @user
-│ *»* ${prefix}hidetag [text]
-│ *»* ${prefix}tagall [text]
-│ *»* ${prefix}antilink [on/off]
-│ *»* ${prefix}mute [on/off]
-│ *»* ${prefix}promote @user
-│ *»* ${prefix}demote @user
-│ *»* ${prefix}vote [text]
-│ *»* ${prefix}devote
-│ *»* ${prefix}upvote
-│ *»* ${prefix}cekvote
-│ *»* ${prefix}hapusvote
-╰─────❍`
-          await tio.sendMessage(m.chat,ggem, esce, m, {
-            quoted: fkontak,
-          })
-        }
-        break
       case "ceklimit":
       case "checklimit":
       case "limit":
