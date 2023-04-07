@@ -2882,7 +2882,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
-          tio.sendMessage(m.chat, { text: "*BERHASIL GRUP MENAMBAHKAN KEDALAM LIST SEWA*" $[1]})
+          tio.sendMessage(m.chat, { text: "*BERHASIL GRUP MENAMBAHKAN KEDALAM LIST SEWA*"})
         }
         break
       case "listsewa":
@@ -7464,7 +7464,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           tio.sendMessage(m.chat, {
             text: `「 *TRANSAKSI DI PROSES* 」\n\n\`\`\`📆 TANGGAL : ${tanggal2}\n⌚ JAM     : ${jam}\n✨ STATUS  : Proses\`\`\`\n\n📝 Catatan : ${q}\n\nPesanan @${
               qmsg.sender.split("@")[0]
-            } sedang Di Proses Admin! ${groupName}`,
+            } Sedang Di Proses Admin ${groupName}`,
             mentions: [qmsg.sender],
           })
         }
@@ -8133,6 +8133,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
 │ *»* ${prefix}getcase
 │ *»* ${prefix}public
 │ *»* ${prefix}addprem/delprem
+│ *»* ${prefix}addsewa/removesewa *[KHUSUS STORE GRUP]*
 ╰────❍`
           let buttons = [
             {
@@ -8165,6 +8166,11 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
             ini_kangbaned.split("@")[0]
           }*
 ╭──❍「 *Group Menu* 」
+│ *»* ${prefix}addlist
+│ *»* ${prefix}updatelist
+│ *»* ${prefix}deletelist
+│ *»* ${prefix}Proses 
+│ *»* ${prefix}Done
 │ *»* ${prefix}linkgroup
 │ *»* ${prefix}ephemeral [option]
 │ *»* ${prefix}setppgc [image]
