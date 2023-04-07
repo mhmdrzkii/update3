@@ -2533,7 +2533,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           sewa = `「 *PRICELIST SEWA BOT* 」\n\n*»* 7 DAY : *5.000 IDR*\n14 DAY : *7.500*\n30 DAY : *12.000 IDR*\n60 DAY :*17.000 IDR*\n\nAvailable Payment \n_QRIS/DANA/BCA/MANDIRI_ \n\nBerikut Beberapa Fitur GRUP `
           let buttons = [
             {
-              buttonId: "allmenu",
+              buttonId: "ggem2",
               buttonText: { displayText: "List Menu" },
               type: 1,
             },
@@ -2543,6 +2543,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           })
         }
         break
+      case "ggem2":
           ggem = `╭──❍「 *STORE MENU* 」
 │ *»* ${prefix}addlist
 │ *»* ${prefix}updatelist
@@ -2571,7 +2572,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 │ *»* ${prefix}cekvote
 │ *»* ${prefix}hapusvote
 ╰─────❍`
-          await tio.sendMessage(m.chat, ggem, esce, m, {
+          await tio.sendMessage(m.chat,ggem, esce, m, {
             quoted: fkontak,
           })
         }
