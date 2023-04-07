@@ -361,7 +361,7 @@ tio.readMessages([m.key])
       const sewa = JSON.parse(fs.readFileSync("./database/sewa.json"))
       if (!checkSewaGrup(m.chat, sewa)) {
         await tio.sendMessage(m.chat, {
-          text: `*Maaf, sewa grup telah berakhir*\n*Silahkan hubungi owner untuk memperpanjang*`,
+          text: `*Maaf, Masa Sewa Group Anda Telah Habis*\n*Silahkan hubungi Owner Untuk Memperpanjang*`,
         })
         await sleep(1500)
         await tio.groupLeave(m.chat)
@@ -2523,15 +2523,10 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             m.chat,
             {
               image: fs.readFileSync("./media/image/tio.jpg"),
-              caption: `*${ucapanWaktu} Kak ${m.pushName}*\n\n *Jika ingin berdonasi silahkan hubungi owner terlebih dahulu*\n\n_Terima kasih_`,
+              caption: `*${ucapanWaktu} Halo Kak ${m.pushName}*\n\n _Jika Kamu Merasa BOT Ini Berguna YUK Bantu Berdonasi Agar BOT Ini Dapat Terus Membantu Kamu`,
             },
             { quoted: m }
           )
-        }
-        break
-      case "sc":
-        {
-          m.reply("https://github.com/BOTCAHX/Hoream-MD")
         }
         break
       case "ceklimit":
@@ -7361,7 +7356,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
           if (db_respon_list.length === 0)
             throw `Belum ada list message di database`
           if (!isAlreadyResponListGroup(m.chat, db_respon_list))
-            throw `Belum ada list message yang terdaftar di group ini`
+            throw `Belum Ada List Message Yang Terdaftar Dalam ${groupName} `
 
           var arr_rows = []
           for (let x of db_respon_list) {
