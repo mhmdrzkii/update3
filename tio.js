@@ -372,7 +372,6 @@ tio.readMessages([m.key])
 
     // Response Addlist
     const storelist = JSON.parse(fs.readFileSync("./database/storelist.json"))
-    const sewa = JSON.parse(fs.readFileSync("./database/sewa.json")) 
     // console.log(!isCmd, isAlreadyResponList(m.chat, body, storelist))
     if (
       !isCmd === false &&
@@ -7407,8 +7406,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
-            fs.readFileSync("./database/storelist.json"),
-            fs.readFileSync("./database/sewa.json")
+            fs.readFileSync("./database/storelist.json")
           )
           var args1 = q.split("@")[0]
           var args2 = q.split("@")[1]
@@ -7431,8 +7429,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
-            fs.readFileSync("./database/storelist.json"),
-            fs.readFileSync("./database/sewa.json")
+            fs.readFileSync("./database/storelist.json")
           )
           if (!q)
             return m.reply(
@@ -7450,8 +7447,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
-            fs.readFileSync("./database/storelist.json"),
-            fs.readFileSync("./database/sewa.json")
+            fs.readFileSync("./database/storelist.json")
           )
           var args1 = q.split("@")[0]
           var args2 = q.split("@")[1]
