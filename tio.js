@@ -2882,14 +2882,15 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
-          tio.sendMessage(m.chat, { text: "*SUKSES MENAMBAHKAN DENGAN DURASI*" }[1])
+          tio.sendMessage(m.chat, { text: "*BERHASIL MENAMBAHKAN KEDALAM LIST SEWA" })
+        }
         break
       case "listsewa":
         {
           if (!isCreator) return m.reply(mess.owner)
           let data = require("./database/sewa.json")
           let txt = `*------「 LIST SEWA 」------*\n\n`
-          if (data.length === 0) return m.reply("Tidak Ada Data Sewa")
+          if (data.length === 0) return m.reply("Tidak ada data sewa")
           for (let i of data) {
             const now = new Date()
             const exp = new Date(i.expired)
