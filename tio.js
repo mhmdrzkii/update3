@@ -362,7 +362,7 @@ tio.readMessages([m.key])
     if (m.message && m.isGroup) {
       const sewa = JSON.parse(fs.readFileSync("./database/sewa.json"))
       if (!checkSewaGrup(m.chat, sewa))
-      if (!isCreator) throw mess.owner
+      if (!isCreator) throw mess.owner {
         await tio.sendMessage(m.chat, {
           text: `*Maaf, Grup Anda Tidak Terdaftar Dalam Database Kami*`,
         })
