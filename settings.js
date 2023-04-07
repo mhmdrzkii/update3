@@ -2,9 +2,9 @@
 
 const fs = require("fs")
 const chalk = require("chalk")
-global.owner = ["6285338939606"]
-global.ownernomer = "6285338939606"
-global.premium = ["6285338939606"]
+global.owner = ["6283850055745"]
+global.ownernomer = "6283850055745"
+global.premium = ["6283850055745"]
 global.packname = "Sticker By"
 global.author = "RYZSTORE"
 global.jumlha = "999"
