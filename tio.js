@@ -2883,7 +2883,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
           tio.sendMessage(m.chat, { text: "*SUKSES MENAMBAHKAN DENGAN DURASI*" }[1])
-          let buttonsSewa = [
+          let buttons = [
             {
               buttonId: `${prefix}listsewa`,
               buttonText: { displayText: LIST SEWA },
