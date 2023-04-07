@@ -2891,7 +2891,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             }
           ]
         break
-       case "listsewa":
+      case "listsewa":
         {
           if (!isCreator) return m.reply(mess.owner)
           let data = require("./database/sewa.json")
