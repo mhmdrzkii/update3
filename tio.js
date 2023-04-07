@@ -2891,25 +2891,14 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
-          sewart = `「 *BERHASIL MENAMBAHKAN DATA* `
-          let buttons = [
-            {
-              buttonId: "listsewa",
-              buttonText: { displayText: "List Menu" },
-              type: 1,
-            },
-          ]
-          await tio.sendButtonText(m.reply, buttons, sewart, esce, m, {
-            quoted: fkontak,
-          })
+          tio.sendMessage(m.chat, { text: "*BERHASIL MENAMBAHKAN DATA*" })
         }
-        break
       case "listsewa":
         {
           if (!isCreator) return m.reply(mess.owner)
           let data = require("./database/sewa.json")
           let txt = `*------「 LIST SEWA 」------*\n\n`
-          if (data.length === 0) return m.reply("Tidak ada data sewa")
+          if (data.length === 0) return m.reply("*TIDAK ADA DATA*")
           for (let i of data) {
             const now = new Date()
             const exp = new Date(i.expired)
@@ -2949,7 +2938,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           const groupId = groupData.id
           data.splice(getSewaPosition(groupId, data), 1)
           fs.writeFileSync("./database/sewa.json", JSON.stringify(data))
-          tio.sendMessage(m.chat, { text: "Sukses Hapus Sewa" })
+          tio.sendMessage(m.chat, { text: "*BERHASIL MENGHAPUS DATA*" })
         }
         break
       case "setname":
