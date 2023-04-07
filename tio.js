@@ -2891,15 +2891,15 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
-          tio.sendMessage(m.chat, { text: "*BERHASIL GRUP MENAMBAHKAN KEDALAM LIST SEWA*"})
+          sewart = `「 *BERHASIL MENAMBAHKAN DATA* `
           let buttons = [
             {
               buttonId: "listsewa",
-              buttonText: { displayText: "LIST GRUP PENYEWA" },
+              buttonText: { displayText: "List Menu" },
               type: 1,
             },
           ]
-          await tio.sendButtonText(m.chat, buttons, addSewaGrup, esce, m, {
+          await tio.sendButtonText(m.reply, buttons, sewart, esce, m, {
             quoted: fkontak,
           })
         }
