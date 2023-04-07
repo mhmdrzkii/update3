@@ -2883,20 +2883,13 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
           tio.sendMessage(m.chat, { text: "*SUKSES MENAMBAHKAN DENGAN DURASI*" }[1])
-          let buttons = [
-            {
-              buttonId: "listsewa",
-              buttonText: { displayText: "LIST SEWA" },
-              type: 1,
-            }
-          ]
         break
       case "listsewa":
         {
           if (!isCreator) return m.reply(mess.owner)
           let data = require("./database/sewa.json")
           let txt = `*------「 LIST SEWA 」------*\n\n`
-          if (data.length === 0) return m.reply("Tidak ada data sewa")
+          if (data.length === 0) return m.reply("Tidak Ada Data Sewa")
           for (let i of data) {
             const now = new Date()
             const exp = new Date(i.expired)
@@ -2917,7 +2910,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
               txtDuration = `${diffDays} Hari`
             }
 
-            const txt = `*Grup : ${i.id}*\n*Durasi Sewa : ${txtDuration} tersisa*\n\n`
+            const txt = `*Grup : ${i.id}*\n*Durasi Sewa : ${txtDuration} Tersisa*\n\n`
             m.reply(txt)
           }
         }
