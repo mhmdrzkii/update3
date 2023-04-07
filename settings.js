@@ -13,11 +13,11 @@ global.jumlah = "1000000000"
 global.prefa = ["", "!", ".", "#", "&"]
 global.sp = ""
 global.mess = {
-  success: "Done ✓",
-  admin: "Fitur Khusus Admin Group!",
-  botAdmin: "Bot Harus Menjadi Admin Terlebih Dahulu!",
+  success: "DONE ✓",
+  admin: "*FITUR KHUSUS ADMIN ✓*!",
+  botAdmin: "*BOT HARUS MENJADI ADMIN TERLEBIH DAHULU*",
   premime: "*FITUR KHUSUS PREMIUM / SEWA BOT, SILAKAN HUBUNGI OWNER*",
-  owner: "Fitur Khusus Owner Bot",
+  owner: "*FITUR KHUSUS OWNER*",
   group: "Fitur Digunakan Hanya Untuk Group!",
   private: "Fitur Digunakan Hanya Untuk Private Chat!",
   bot: "Fitur Khusus Pengguna Nomor Bot",
