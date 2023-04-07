@@ -2882,7 +2882,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
-          tio.sendMessage(m.chat, { text: "*BERHASIL MENAMBAHKAN KEDALAM LIST SEWA" })
+          tio.sendMessage(m.chat, { text: "*BERHASIL GRUP MENAMBAHKAN KEDALAM LIST SEWA*" })
         }
         break
       case "listsewa":
@@ -2911,9 +2911,9 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
               txtDuration = `${diffDays} Hari`
             }
 
-            const txt = `*Grup : ${i.id}*\n*Durasi Sewa : ${txtDuration} Tersisa*\n\n`
-            m.reply(txt)
+            txt = `*Grup : ${i.id}*\n*Durasi Sewa : ${txtDuration} Tersisa*\n\n`
           }
+          m.reply(txt)
         }
         break
       case "removesewa":
