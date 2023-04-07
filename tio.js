@@ -7407,7 +7407,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
-            fs.readFileSync("./database/storelist.json")
+            fs.readFileSync("./database/storelist.json"),
             fs.readFileSync("./database/sewa.json")
           )
           var args1 = q.split("@")[0]
@@ -7431,7 +7431,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
-            fs.readFileSync("./database/storelist.json")
+            fs.readFileSync("./database/storelist.json"),
             fs.readFileSync("./database/sewa.json")
           )
           if (!q)
@@ -7450,7 +7450,7 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
           if (!isAdmins) throw mess.admin
           if (!isPremium) throw mess.premime
           const db_respon_list = JSON.parse(
-            fs.readFileSync("./database/storelist.json")
+            fs.readFileSync("./database/storelist.json"),
             fs.readFileSync("./database/sewa.json")
           )
           var args1 = q.split("@")[0]
