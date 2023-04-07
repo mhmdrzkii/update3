@@ -361,9 +361,10 @@ tio.readMessages([m.key])
     //check sewa grup
     if (m.message && m.isGroup) {
       const sewa = JSON.parse(fs.readFileSync("./database/sewa.json"))
-      if (!checkSewaGrup(m.chat, sewa)) {
+      if (!checkSewaGrup(m.chat, sewa))
+      if (!isCreator) throw mess.owner {
         await tio.sendMessage(m.chat, {
-          text: `*Maaf, Masa Sewa Group Anda Telah Habis*\n*Silahkan hubungi Owner Untuk Memperpanjang*`,
+          text: `*Maaf, Grup Anda Tidak Terdaftar Dalam Database Kami*`,
         })
         await sleep(1500)
         await tio.groupLeave(m.chat)
