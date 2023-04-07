@@ -2885,7 +2885,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           tio.sendMessage(m.chat, { text: "*SUKSES MENAMBAHKAN DENGAN DURASI*" }[1])
           let buttons = [
             {
-              buttonId: `${prefix}listsewa`,
+              buttonId: "listsewa"
               buttonText: { displayText: "LIST SEWA" },
               type: 1,
             }
