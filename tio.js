@@ -2514,8 +2514,6 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
         }
         break
       case "donasi":
-      case "sewabot":
-      case "sewa":
       case "buypremium":
       case "donate":
         {
@@ -2527,6 +2525,55 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             },
             { quoted: m }
           )
+        }
+        break
+      case "sewabot":
+      case "sewa":
+        {
+          sewa = `「 *PRICELIST SEWA BOT* 」\n\n*»* 7 DAY : *5.000 IDR*\n14 DAY : *7.500*\n30 DAY : *12.000 IDR*\n60 DAY :*17.000 IDR*\n\nAvailable Payment \n_QRIS/DANA/BCA/MANDIRI_ \n\nBerikut Beberapa Fitur GRUP `
+          let buttons = [
+            {
+              buttonId: "allmenu",
+              buttonText: { displayText: "List Menu" },
+              type: 1,
+            },
+          ]
+          await tio.sendButtonText(m.chat, buttons, sewa, esce, m, {
+            quoted: fkontak,
+          })
+        }
+        break
+          ggem = `╭──❍「 *STORE MENU* 」
+│ *»* ${prefix}addlist
+│ *»* ${prefix}updatelist
+│ *»* ${prefix}deletelist
+│ *»* ${prefix}Proses 
+│ *»* ${prefix}Done
+│ *»* ${prefix}Welcome Message
+│ *»* ${prefix}linkgroup
+│ *»* ${prefix}ephemeral [option]
+│ *»* ${prefix}setppgc [image]
+│ *»* ${prefix}setname [text]
+│ *»* ${prefix}setdesc [text]
+│ *»* ${prefix}group [option]
+│ *»* ${prefix}editinfo [option]
+│ *»* ${prefix}add @user
+│ *»* ${prefix}kick @user
+│ *»* ${prefix}hidetag [text]
+│ *»* ${prefix}tagall [text]
+│ *»* ${prefix}antilink [on/off]
+│ *»* ${prefix}mute [on/off]
+│ *»* ${prefix}promote @user
+│ *»* ${prefix}demote @user
+│ *»* ${prefix}vote [text]
+│ *»* ${prefix}devote
+│ *»* ${prefix}upvote
+│ *»* ${prefix}cekvote
+│ *»* ${prefix}hapusvote
+╰─────❍`
+          await tio.sendMessage(m.chat, buttons, ggem, esce, m, {
+            quoted: fkontak,
+          })
         }
         break
       case "ceklimit":
@@ -7056,8 +7103,8 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
           rules = `╭──❍「 *RULES BOT* 」
 │
 ├ *DILARANG SPAM COMMAND*
-├ *DILARANG MELAKUKAN PANGGILAN SUARA KPD BOT*
-├ *DILARANG MEMASUKAN BOT KEDALAM GRUP TANPA IZIN OWNER*
+├ *DILARANG MELAKUKAN PANGGILAN KPD BOT*
+├ *DILARANG MEMASUKAN BOT KEDALAM GRUP TANPA IZIN*
 │
 ╰────❍`
           let buttons = [
