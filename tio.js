@@ -2571,7 +2571,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 │ *»* ${prefix}cekvote
 │ *»* ${prefix}hapusvote
 ╰─────❍`
-          await tio.sendMessage(m.chat, buttons, ggem, esce, m, {
+          await tio.sendMessage(m.chat, ggem, esce, m, {
             quoted: fkontak,
           })
         }
