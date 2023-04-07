@@ -2886,7 +2886,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           let buttons = [
             {
               buttonId: `${prefix}listsewa`,
-              buttonText: { displayText: LIST SEWA },
+              buttonText: { displayText: "LIST SEWA" },
               type: 1,
             }
         }
