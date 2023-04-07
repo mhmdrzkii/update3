@@ -2530,10 +2530,10 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
       case "sewabot":
       case "sewa":
         {
-          sewa = `「 *PRICELIST SEWA BOT* 」\n\n*»* 7 DAY : *5.000 IDR*\n14 DAY : *7.500*\n30 DAY : *12.000 IDR*\n60 DAY :*17.000 IDR*\n\nAvailable Payment \n_QRIS/DANA/BCA/MANDIRI_ \n\nBerikut Beberapa Fitur GRUP `
+          sewa = `「 *PRICELIST SEWA BOT* 」\n\n*»* 7 DAY : *5.000 IDR*\n*»* 14 DAY : *7.500*\n*»* 30 DAY : *12.000 IDR*\n*»* 60 DAY :*17.000 IDR*\n\nAvailable Payment \n_QRIS/DANA/BCA/MANDIRI_ \n\nBerikut Beberapa Fitur GRUP `
           let buttons = [
             {
-              buttonId: "ggem2",
+              buttonId: "goup",
               buttonText: { displayText: "List Menu" },
               type: 1,
             },
@@ -2892,6 +2892,16 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           const groupId = groupData.id
           addSewaGrup(groupId, args[1], data)
           tio.sendMessage(m.chat, { text: "*BERHASIL GRUP MENAMBAHKAN KEDALAM LIST SEWA*"})
+          let buttons = [
+            {
+              buttonId: "listsewa",
+              buttonText: { displayText: "LIST GRUP PENYEWA" },
+              type: 1,
+            },
+          ]
+          await tio.sendButtonText(m.chat, buttons, addSewaGrup, esce, m, {
+            quoted: fkontak,
+          })
         }
         break
       case "listsewa":
@@ -7522,13 +7532,6 @@ ${arr_rows.map((v) => `\n│ *»* ${v.title}`).join("")}
 │ *»* ${prefix}upvote
 │ *»* ${prefix}cekvote
 │ *»* ${prefix}hapusvote
-│ *»* ${prefix}tagme
-│ *»* ${prefix}totag
-│ *»* ${prefix}quoted
-│ *»* ${prefix}wm
-│ *»* ${prefix}emoji
-│ *»* ${prefix}toqr
-│ *»* ${prefix}gcsearch
 ╰─────❍`
           let buttons = [
             {
