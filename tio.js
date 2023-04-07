@@ -340,10 +340,6 @@ if (m.message) {
 tio.sendPresenceUpdate('composing', m.chat)
 tio.readMessages([m.key])
 }
- if (m.message) {
-tio.sendPresenceUpdate('recording', m.chat)
-tio.readMessages([m.key])
-}
     /**if (m.message) {
 tio.sendPresenceUpdate('composing', m.chat)
 tio.readMessages([m.key])
@@ -2527,7 +2523,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             m.chat,
             {
               image: fs.readFileSync("./media/image/tio.jpg"),
-              caption: `*${ucapanWaktu} Halo Kak ${m.pushName}*\n\n _Jika Kamu Merasa BOT Ini Berguna YUK Bantu Berdonasi Agar BOT Ini Dapat Terus Membantu Kamu`,
+              caption: `*${ucapanWaktu} Halo Kak ${m.pushName}*\n\n _Jika Kamu Merasa BOT Ini Berguna YUK Bantu Berdonasi Agar BOT Ini Dapat Terus Membantu Kamu_`,
             },
             { quoted: m }
           )
@@ -2539,7 +2535,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
           sewa = `「 *PRICELIST SEWA BOT* 」\n\n*»* 7 DAY : *5.000 IDR*\n*»* 14 DAY : *7.500*\n*»* 30 DAY : *12.000 IDR*\n*»* 60 DAY :*17.000 IDR*\n\nAvailable Payment \n_QRIS/DANA/BCA/MANDIRI_ \n\nBerikut Beberapa Fitur GRUP `
           let buttons = [
             {
-              buttonId: "goup",
+              buttonId: "mgroup",
               buttonText: { displayText: "List Menu" },
               type: 1,
             },
