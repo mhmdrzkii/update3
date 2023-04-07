@@ -2889,7 +2889,8 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
               buttonText: { displayText: "LIST SEWA" },
               type: 1,
             }
-        }
+          ]
+       
         break
       case "listsewa":
         {
